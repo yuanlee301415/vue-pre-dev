@@ -1,5 +1,6 @@
 {
-  "name": "vue-random",
+  "name": "vue-pre-dev",
+  "description": "Vue 组件预研",
   "version": "0.1.0",
   "private": true,
   "scripts": {

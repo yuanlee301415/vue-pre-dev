@@ -1,4 +1,4 @@
-# vue-template-by-cli
+# vue-pre-dev
 
 ## Project setup
 ```
