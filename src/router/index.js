@@ -7,12 +7,12 @@ const routes = [
   // Home
   {
     path: '/',
-    name: 'Home',
     component: Layout,
     redirect: '/',
     children: [
       {
         path: '',
+        name: 'Home',
         meta: {
           title: 'Home'
         },
@@ -25,6 +25,9 @@ const routes = [
   {
     path: '/tree',
     name: 'Tree',
+    meta: {
+      title: 'Tree'
+    },
     component: Layout,
     redirect: '/tree/my-tree',
     children: [
