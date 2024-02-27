@@ -48,6 +48,42 @@ const routes = [
         component: () => import('@/views/tree/js-tree')
       }
     ]
+  },
+
+  // vue-tree-list
+  {
+    path: '/vue-tree-list',
+    name: 'vue-tree-list',
+    meta: {
+      title: 'VUE_TREE_LIST'
+    },
+    component: Layout,
+    children: [
+      {
+        path: 'basic',
+        name: 'vue-tree-list_basic',
+        meta: {
+          title: 'Basic'
+        },
+        component: () => import('@/views/vue-tree-list/basic.vue')
+      },
+      {
+        path: 'empty',
+        name: 'vue-tree-list_empty',
+        meta: {
+          title: 'Empty'
+        },
+        component: () => import('@/views/vue-tree-list/empty.vue')
+      },
+      {
+        path: 'pid',
+        name: 'vue-tree-list_pid',
+        meta: {
+          title: 'PID'
+        },
+        component: () => import('@/views/vue-tree-list/pid.vue')
+      }
+    ]
   }
 ]
 

@@ -1,0 +1,64 @@
+[
+  {
+    "isLeaf": false,
+    "name": "Node 1",
+    "children": [
+      {
+        "isLeaf": false,
+        "name": "Node 1-2",
+        "children": [
+          {
+            "isLeaf": true,
+            "name": "new leaf"
+          },
+          {
+            "isLeaf": false,
+            "name": "new node",
+            "children": [
+              {
+                "isLeaf": false,
+                "name": "new node",
+                "children": [
+                  {
+                    "isLeaf": true,
+                    "name": "new leaf"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "isLeaf": false,
+    "name": "Node 2",
+    "children": [
+      {
+        "isLeaf": true,
+        "name": "new leaf"
+      },
+      {
+        "isLeaf": false,
+        "name": "new node"
+      }
+    ]
+  },
+  {
+    "isLeaf": false,
+    "name": "Node 3",
+    "children": [
+      {
+        "isLeaf": false,
+        "name": "new node",
+        "children": [
+          {
+            "isLeaf": true,
+            "name": "new leaf"
+          }
+        ]
+      }
+    ]
+  }
+]
