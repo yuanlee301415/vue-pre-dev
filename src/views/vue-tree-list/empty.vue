@@ -1,25 +1,28 @@
 <template>
   <div>
-    <button @click="addNode">Add Node</button>
-    <button @click="addLeaf">Add Leaf</button>
-    <vue-tree-list
-        @click="onClick"
-        @change-name="onChangeName"
-        @delete-node="onDel"
-        @add-node="onAddNode"
-        :model="data"
-        default-tree-node-name="new node"
-        default-leaf-node-name="new leaf"
-    >
-      <template v-slot:leafNameDisplay="slotProps">
+    <button @click="addNode">新增节点</button>
+    <button @click="addLeaf">新增叶子节点</button>
+
+    <div style="border: 1px solid gray;margin: 10px 0;padding: 10px;">
+      <vue-tree-list
+          @click="onClick"
+          @change-name="onChangeName"
+          @delete-node="onDel"
+          @add-node="onAddNode"
+          :model="data"
+          default-tree-node-name="new node"
+          default-leaf-node-name="new leaf"
+      >
+        <template v-slot:leafNameDisplay="slotProps">
         <span>
           {{ slotProps.model.name }}
         </span>
-      </template>
-    </vue-tree-list>
+        </template>
+      </vue-tree-list>
+    </div>
 
     <hr>
-    <button @click="getNewTree">Get new tree</button>
+    <button @click="getNewTree">Submit</button>
     <pre>{{ newTree }}</pre>
   </div>
 </template>
