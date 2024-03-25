@@ -11,7 +11,8 @@ console.log('env:\n', JSON.stringify({
   NODE_ENV: process.env.NODE_ENV,
   ENV: process.env.ENV,
   VUE_APP_SEMANTIC_VERSION: process.env.VUE_APP_SEMANTIC_VERSION,
-  VUE_APP_BUILD_DATE: process.env.VUE_APP_BUILD_DATE
+  VUE_APP_BUILD_DATE: process.env.VUE_APP_BUILD_DATE,
+  VUE_APP_PROXY: process.env.VUE_APP_PROXY
 }, null, 2))
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
@@ -35,17 +36,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: {
-      // change xxx-api/login => mock/login
-      // detail: https://cli.vuejs.org/config/#devserver-proxy
+    proxy: process.env.VUE_APP_PROXY ? {
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:10300`,
+        target: process.env.VUE_APP_PROXY,
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: '/api/v1'
         }
       }
-    }
+    } : void 0
   },
   configureWebpack: {
     resolve: {
