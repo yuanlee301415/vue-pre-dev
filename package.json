@@ -1,7 +1,7 @@
 {
   "name": "vue-pre-dev",
   "description": "Vue 预研",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
