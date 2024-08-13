@@ -35,17 +35,8 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    }
     },
-    proxy: process.env.VUE_APP_PROXY ? {
-      [process.env.VUE_APP_BASE_API]: {
-        target: process.env.VUE_APP_PROXY,
-        changeOrigin: true,
-        pathRewrite: {
-          ['^' + process.env.VUE_APP_BASE_API]: '/api/v1'
-        }
-      }
-    } : void 0
-  },
   configureWebpack: {
     resolve: {
       alias: {
